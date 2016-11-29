@@ -64,6 +64,9 @@ body {
 	text-decoration: none;
 	font-size: 50px;
 	line-height: 1em;
+	&:hover {
+		color: lighten($text-color, 50%);
+	}
 }
 .ba-nav {
 	&__list {
@@ -206,7 +209,18 @@ body {
 		color: $text-color;
 		&:hover {
 			background-color: darken(#fff, 50%);
+			color: $secondary-text-color;
+			.ba-services__item {
+				fill: #fff;
+			}
 		}
+	}
+	&__item {
+		-webkit-transition: all .2s ease-in;
+		   -moz-transition: all .2s ease-in;
+		    -ms-transition: all .2s ease-in;
+		     -o-transition: all .2s ease-in;
+		        transition: all .2s ease-in;
 	}
 	&__icon {
 		width: 54px;
@@ -345,9 +359,6 @@ body {
 		color: $secondary-text-color;
 	}
 }
-.ba-gallery__container:nth-child(3) {
-	margin-top: 30px;
-}
 
 .ba-subscribe {
 	background: url(../images/subscribe-bg.png) 0 0 no-repeat;
@@ -423,17 +434,32 @@ body {
 	}
 	&__item {
 		position: relative;
-			&:hover {
-				-webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-				        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-				cursor: pointer;
-			}
+			
+	}
+	&__wrapp {
+		margin: 0 15px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		-webkit-transition: all .2s ease-in;
+		   -moz-transition: all .2s ease-in;
+		    -ms-transition: all .2s ease-in;
+		     -o-transition: all .2s ease-in;
+		        transition: all .2s ease-in;
+		&:hover {
+			-webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+			        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+			cursor: pointer;
+		}
 	}
 	&__container {
 		position: absolute;
 		top: 30px;
 		left: 35px;
 	}
+	
 	&__wrapper {
 		width: 60px;
 		height: 60px;
