@@ -37,6 +37,10 @@ body {
   line-height: 1em;
 }
 
+.ba-logo:hover {
+  color: #a6a6a6;
+}
+
 .ba-nav__list {
   list-style-type: none;
   margin: 0;
@@ -196,6 +200,19 @@ body {
 
 .ba-services__link:hover {
   background-color: gray;
+  color: #ffffff;
+}
+
+.ba-services__link:hover .ba-services__item {
+  fill: #fff;
+}
+
+.ba-services__item {
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 .ba-services__icon {
@@ -350,10 +367,6 @@ body {
   color: #ffffff;
 }
 
-.ba-gallery__container:nth-child(3) {
-  margin-top: 30px;
-}
-
 .ba-subscribe {
   background: url(../images/subscribe-bg.png) 0 0 no-repeat;
   -webkit-background-size: cover;
@@ -445,7 +458,21 @@ body {
   position: relative;
 }
 
-.ba-blog__item:hover {
+.ba-blog__wrapp {
+  margin: 0 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.ba-blog__wrapp:hover {
   -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
